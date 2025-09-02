@@ -1,43 +1,58 @@
-import { Tabs } from 'expo-router';
-import React from 'react';
-import { Platform } from 'react-native';
-
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Ionicons } from "@expo/vector-icons";
+import { Tabs } from "expo-router";
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
+        tabBarActiveTintColor: "#007AFF",
+        tabBarInactiveTintColor: "gray",
+      }}
+    >
       <Tabs.Screen
-        name="index"
+        name="learn"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: "Learn",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="book-outline" size={size} color={color} />
+          ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="game"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: "Game",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="game-controller-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="plus"
+        options={{
+          title: "Plus",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="add-circle" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="competition"
+        options={{
+          title: "Competition",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="trophy-outline" size={size} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="person-circle-outline" size={size} color={color} />
+          ),
         }}
       />
     </Tabs>
