@@ -1,21 +1,32 @@
-import { Ionicons } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
+import { Image } from "react-native";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#007AFF",
-        tabBarInactiveTintColor: "gray",
+        tabBarActiveTintColor: "white", // ✅ active text color
+        tabBarInactiveTintColor: "black", // ✅ inactive text color
+        tabBarStyle: {
+          backgroundColor: "#1EEDA2", // ✅ green background
+        },
       }}
     >
       <Tabs.Screen
         name="learn"
         options={{
           title: "Learn",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="book-outline" size={size} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../../assets/images/learn.png")}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
@@ -23,8 +34,16 @@ export default function TabLayout() {
         name="game"
         options={{
           title: "Game",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="game-controller-outline" size={size} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../../assets/images/game.png")}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
@@ -32,8 +51,16 @@ export default function TabLayout() {
         name="plus"
         options={{
           title: "Plus",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="add-circle" size={size} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../../assets/images/plus.png")}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
@@ -41,8 +68,16 @@ export default function TabLayout() {
         name="competition"
         options={{
           title: "Competition",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="trophy-outline" size={size} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../../assets/images/competition.png")}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
@@ -50,8 +85,16 @@ export default function TabLayout() {
         name="profile"
         options={{
           title: "Profile",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="person-circle-outline" size={size} color={color} />
+          tabBarIcon: ({ focused }) => (
+            <Image
+              source={require("../../assets/images/profile.png")}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
+            />
           ),
         }}
       />
