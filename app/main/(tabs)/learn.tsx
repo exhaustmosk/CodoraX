@@ -35,19 +35,19 @@ export default function LearnScreen() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Image
-        source={require("../../assets/images/logo.png")}
+        source={require("../../../assets/images/logo.png")}
         style={styles.logo}
         resizeMode="contain"
       />
 
       <Image
-        source={require("../../assets/images/Banner.png")}
+        source={require("../../../assets/images/Banner.png")}
         style={styles.banner}
         resizeMode="contain"
       />
 
       <Image
-        source={require("../../assets/images/BannerText.png")}
+        source={require("../../../assets/images/BannerText.png")}
         style={styles.bannerText}
         resizeMode="contain"
       />
@@ -59,7 +59,7 @@ export default function LearnScreen() {
           onPress={() => handleNavigate("BasicsOfProgramming")}
         >
           <Animated.Image
-            source={require("../../assets/images/BasicsOfProgramming.png")}
+            source={require("../../../assets/images/BasicsOfProgramming.png")}
             style={[styles.optionImage, { transform: [{ scale: scaleBasics }] }]}
             resizeMode="contain"
           />
@@ -71,7 +71,7 @@ export default function LearnScreen() {
           onPress={() => handleNavigate("HTML")}
         >
           <Animated.Image
-            source={require("../../assets/images/HTML.png")}
+            source={require("../../../assets/images/HTML.png")}
             style={[styles.optionImage, { transform: [{ scale: scaleHTML }] }]}
             resizeMode="contain"
           />
@@ -83,7 +83,7 @@ export default function LearnScreen() {
           onPress={() => handleNavigate("Python")}
         >
           <Animated.Image
-            source={require("../../assets/images/Python.png")}
+            source={require("../../../assets/images/Python.png")}
             style={[styles.optionImage, { transform: [{ scale: scalePython }] }]}
             resizeMode="contain"
           />
