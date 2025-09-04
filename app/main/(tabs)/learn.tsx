@@ -1,4 +1,3 @@
-// app/(tabs)/learn.tsx
 import { useRouter } from "expo-router";
 import React from "react";
 import {
@@ -26,10 +25,9 @@ export default function LearnScreen() {
     Animated.spring(scale, { toValue: 1, useNativeDriver: true }).start();
   };
 
-  // Corrected navigation paths for Expo Router
+  // ✅ Fix typing issue by casting to `any`
   const handleNavigate = (screenName: string) => {
-    // Use relative nested path
-    router.push(`./learn/${screenName}`);
+    router.push(`/learn/${screenName}` as any);
   };
 
   return (

@@ -24,7 +24,7 @@ export default function Competition() {
     <ScrollView contentContainerStyle={styles.container}>
       {/* Heading PNG */}
       <Image
-        source={require('../../assets/images/Competition/Heading.png')}
+        source={require('../../../assets/images/Competition/Heading.png')}
         style={styles.headerImage}
         resizeMode="contain"
       />
@@ -32,7 +32,7 @@ export default function Competition() {
       {/* Quizzes Section */}
       <View style={styles.sectionWrapper}>
         <Animated.Image
-          source={require('../../assets/images/Competition/Quizzes.png')}
+          source={require('../../../assets/images/Competition/Quizzes.png')}
           style={[
             styles.sectionImage,
             {
@@ -55,7 +55,7 @@ export default function Competition() {
           onPress={() => console.log('Quizzes clicked')}
         >
           <Animated.Image
-            source={require('../../assets/images/Competition/Button1.png')}
+            source={require('../../../assets/images/Competition/Button1.png')}
             style={[
               styles.buttonImage,
               { transform: [{ scale: scaleBtn1 }] },
@@ -68,7 +68,7 @@ export default function Competition() {
       {/* Badges Section */}
       <View style={styles.sectionWrapper}>
         <Animated.Image
-          source={require('../../assets/images/Competition/Badges.png')}
+          source={require('../../../assets/images/Competition/Badges.png')}
           style={[
             styles.sectionImage,
             {
@@ -91,7 +91,7 @@ export default function Competition() {
           onPress={() => console.log('Badges clicked')}
         >
           <Animated.Image
-            source={require('../../assets/images/Competition/Button2.png')}
+            source={require('../../../assets/images/Competition/Button2.png')}
             style={[
               styles.buttonImage,
               { transform: [{ scale: scaleBtn2 }] },
@@ -104,7 +104,7 @@ export default function Competition() {
       {/* Highscore Section */}
       <View style={styles.sectionWrapper}>
         <Animated.Image
-          source={require('../../assets/images/Competition/Highscore.png')}
+          source={require('../../../assets/images/Competition/Highscore.png')}
           style={[
             styles.sectionImage,
             {
@@ -127,7 +127,7 @@ export default function Competition() {
           onPress={() => console.log('Highscore clicked')}
         >
           <Animated.Image
-            source={require('../../assets/images/Competition/Button3.png')}
+            source={require('../../../assets/images/Competition/Button3.png')}
             style={[
               styles.buttonImage,
               { transform: [{ scale: scaleBtn3 }] },
