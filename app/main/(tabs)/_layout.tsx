@@ -1,4 +1,3 @@
-// app/(main)/(tabs)/_layout.tsx
 import { Tabs } from "expo-router";
 import { Image } from "react-native";
 
@@ -7,9 +6,11 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "white",
-        tabBarInactiveTintColor: "black",
-        tabBarStyle: { backgroundColor: "#1EEDA2" },
+        tabBarActiveTintColor: "white", // ✅ active text color
+        tabBarInactiveTintColor: "black", // ✅ inactive text color
+        tabBarStyle: {
+          backgroundColor: "#1EEDA2", // ✅ green background
+        },
       }}
     >
       <Tabs.Screen
@@ -19,12 +20,16 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../../assets/images/learn.png")}
-              style={{ width: 28, height: 28, tintColor: focused ? "white" : "black" }}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
             />
           ),
         }}
       />
-
       <Tabs.Screen
         name="game"
         options={{
@@ -32,13 +37,16 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../../assets/images/game.png")}
-              style={{ width: 28, height: 28, tintColor: focused ? "white" : "black" }}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
               resizeMode="contain"
             />
           ),
         }}
       />
-
       <Tabs.Screen
         name="plus"
         options={{
@@ -46,12 +54,16 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../../assets/images/plus.png")}
-              style={{ width: 28, height: 28, tintColor: focused ? "white" : "black" }}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
             />
           ),
         }}
       />
-
       <Tabs.Screen
         name="competition"
         options={{
@@ -59,12 +71,16 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../../assets/images/competition.png")}
-              style={{ width: 28, height: 28, tintColor: focused ? "white" : "black" }}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
             />
           ),
         }}
       />
-
       <Tabs.Screen
         name="profile"
         options={{
@@ -72,7 +88,12 @@ export default function TabLayout() {
           tabBarIcon: ({ focused }) => (
             <Image
               source={require("../../../assets/images/profile.png")}
-              style={{ width: 28, height: 28, tintColor: focused ? "white" : "black" }}
+              style={{
+                width: 28,
+                height: 28,
+                tintColor: focused ? "white" : "black",
+              }}
+              resizeMode="contain"
             />
           ),
         }}

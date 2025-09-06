@@ -8,7 +8,7 @@ export default function UnderDevelopment() {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/images/UnderDevelopment/Development.png")}
+        source={require("../../assets/images/UnderDevelopment/Development.png")}
         style={styles.image}
         resizeMode="contain"
       />
@@ -16,7 +16,7 @@ export default function UnderDevelopment() {
       {/* Back Button PNG */}
       <Pressable onPress={() => router.back()}>
         <Image
-          source={require("../assets/images/UnderDevelopment/back.png")}
+          source={require("../../assets/images/UnderDevelopment/back.png")}
           style={styles.backImage}
           resizeMode="contain"
         />
