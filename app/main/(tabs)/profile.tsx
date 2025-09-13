@@ -53,7 +53,7 @@ export default function ProfileScreen() {
       {/* DP & User Info */}
       <View style={styles.userHeader}>
         <Animated.Image
-          source={require("../../../assets/images/dp_placeholder.png")}
+          source={require("../../../assets/images/Profile/dp_placeholder.png")}
           style={[styles.dp, { transform: [{ scale: dpScale }] }]}
         />
         <View style={styles.userInfo}>
